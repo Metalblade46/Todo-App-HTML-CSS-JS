@@ -24,7 +24,7 @@ document.getElementById("Time").innerText = new Date().toLocaleDateString(
   window.addEventListener("DOMContentLoaded", () => {
     payload = JSON.parse(localStorage.getItem("payload"));
     // console.log(payload);
-    payload.forEach((name, index) => addDataToDom(name, index));
+    if(!payload) payload.forEach((name, index) => addDataToDom(name, index));
   });
   let parentElement = document.getElementById("todo-list");
   let submitButton = document.getElementById("submit");
@@ -45,7 +45,8 @@ document.getElementById("Time").innerText = new Date().toLocaleDateString(
     const form = e.target;
     let input = inputElement.value;
     if (input) {
-      addDataToDom(input, payload.length);
+        let length = (payload)? payload.length: 0;
+      addDataToDom(input, length);
       payload.push(input);
       console.log(payload);
       inputElement.value = "";
