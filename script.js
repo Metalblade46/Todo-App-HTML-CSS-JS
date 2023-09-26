@@ -24,7 +24,7 @@ document.getElementById("Time").innerText = new Date().toLocaleDateString(
   window.addEventListener("DOMContentLoaded", () => {
     payload = JSON.parse(localStorage.getItem("payload"));
     // console.log(payload);
-    if(!payload) payload.forEach((name, index) => addDataToDom(name, index));
+    if(payload) payload.forEach((name, index) => addDataToDom(name, index));
   });
   let parentElement = document.getElementById("todo-list");
   let submitButton = document.getElementById("submit");
