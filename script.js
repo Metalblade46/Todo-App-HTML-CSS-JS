@@ -47,7 +47,7 @@ document.getElementById("Time").innerText = new Date().toLocaleDateString(
     if (input) {
       addDataToDom(input, payload.length);
       payload.push(input);
-    //   console.log(payload);
+      console.log(payload);
       inputElement.value = "";
     }
     inputElement.focus();
