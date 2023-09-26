@@ -1,2 +1,2 @@
 # Todo-App-HTML-CSS-JS
-Created with CodeSandbox
+A todo application made with JS with local storage. So, we can reload but data will be fetched from the browser's localstorage
